@@ -1,0 +1,968 @@
+﻿<Structure xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Structure">
+	<Property name="Формат">
+		<Value xsi:type="xs:string">УИ_КонсольЗапросов</Value>
+	</Property>
+	<Property name="Версия">
+		<Value xsi:type="xs:decimal">13</Value>
+	</Property>
+	<Property name="КоличествоЗапросов">
+		<Value xsi:type="xs:decimal">13</Value>
+	</Property>
+	<Property name="ИмяФайла">
+		<Value xsi:type="xs:string">H:\BUFFER\IBS\Develop\tools_ui_1c.port\saves\ИсторияПоДоговорам.q9</Value>
+	</Property>
+	<Property name="СохраняемыеСостояния">
+		<Value xsi:type="Structure">
+			<Property name="ВидРезультата">
+				<Value xsi:type="xs:string">дерево</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрок">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокВкл">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокПервые">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокПервыеВкл">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="ПараметрыЗапросаРядомСТекстом">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="ТекущийЗапрос">
+		<Value xsi:type="xs:string">ПроведениеГруппамиПотоками</Value>
+	</Property>
+	<Property name="Опции">
+		<Value xsi:type="Structure">
+			<Property name="ОпцияСохранятьКомментарии">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОпцияАвтосохранениеПередВыполнениемЗапроса">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОпцияПериодОпросаВключенияВыключенияТехнологическогоЖурнала">
+				<Value xsi:type="xs:decimal">3</Value>
+			</Property>
+			<Property name="ОпцияОбрабатывать__">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОпцияИнтервалОбновленияВыполненияАлгоритма">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОпцияИнтервалАвтосохранения">
+				<Value xsi:type="xs:decimal">60</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="ПакетЗапросов">
+		<Value xsi:type="Array">
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">ПроведениеГруппамиПотоками</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	РеализацияТоваровУслуг.Ссылка КАК Ссылка,
+	РеализацияТоваровУслуг.Партнер КАК Партнер,
+	РеализацияТоваровУслуг.Дата КАК Дата
+ИЗ
+	Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
+ГДЕ
+	НЕ РеализацияТоваровУслуг.Проведен
+	И НЕ РеализацияТоваровУслуг.ПометкаУдаления
+	И РеализацияТоваровУслуг.Организация = &amp;Организация
+	И РеализацияТоваровУслуг.Менеджер = &amp;Менеджер
+	И РеализацияТоваровУслуг.Склад В ИЕРАРХИИ (&amp;Склад)
+	И РеализацияТоваровУслуг.Дата между &amp;ДатаНач и &amp;ДатаОкон
+
+УПОРЯДОЧИТЬ ПО
+	Дата,
+	Партнер
+ИТОГИ ПО
+	Партнер
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">5</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Дата</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">0001-01-01T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">0001-01-01T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Менеджер</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Пользователи</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Пользователи">54d6767e-6824-11ec-bc8c-ef1ce05427fa</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Пользователи">54d6767e-6824-11ec-bc8c-ef1ce05427fa</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Организация</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Организации</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Организации">eeb5d071-6071-11ec-bc8c-00505687c8d7</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Организации">eeb5d071-6071-11ec-bc8c-00505687c8d7</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">2</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Склад</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Склады</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">Продукты питания</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">2</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="Structure">
+										<Property name="Тип">
+											<Value xsi:type="xs:string">Массив</Value>
+										</Property>
+										<Property name="СписокЗначений">
+											<Value xsi:type="ValueListType">
+												<valueType/>
+												<lastId xsi:type="xs:decimal">0</lastId>
+												<item>
+													<value xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d14p1:CatalogRef.Склады">8c1a0021-94e9-11ec-ab14-00505687ac78</value>
+													<id xsi:type="xs:decimal">0</id>
+												</item>
+											</Value>
+										</Property>
+										<Property name="Представление">
+											<Value xsi:type="xs:string">Продукты питания</Value>
+										</Property>
+									</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">3</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">ДатаНач</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2022-02-01T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2022-02-01T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">4</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">ДатаОкон</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2022-02-28T23:59:59</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2022-02-28T23:59:59</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">5</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">9 421 / 0:00:00.054</Value>
+				</Property>
+				<Property name="КурсорНачалоСтроки">
+					<Value xsi:type="xs:decimal">19</Value>
+				</Property>
+				<Property name="КурсорНачалоКолонки">
+					<Value xsi:type="xs:decimal">29</Value>
+				</Property>
+				<Property name="КурсорКонецСтроки">
+					<Value xsi:type="xs:decimal">19</Value>
+				</Property>
+				<Property name="КурсорКонецКолонки">
+					<Value xsi:type="xs:decimal">29</Value>
+				</Property>
+				<Property name="КодКурсорНачалоСтроки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КодКурсорНачалоКолонки">
+					<Value xsi:type="xs:decimal">5</Value>
+				</Property>
+				<Property name="КодКурсорКонецСтроки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КодКурсорКонецКолонки">
+					<Value xsi:type="xs:decimal">5</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">ДоговораАрендыПартнеры</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ДоговорыАренды.Партнер КАК Партнер,
+	ДоговорыАренды.Ссылка КАК Ссылка,
+	ДоговорыАренды.Контрагент КАК Контрагент
+ИЗ
+	Справочник.ДоговорыАренды КАК ДоговорыАренды
+ГДЕ
+	ДоговорыАренды.Контрагент.Партнер &lt;&gt; ДоговорыАренды.Партнер</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array">
+						<Value xsi:type="Structure">
+							<Property name="Имя">
+								<Value xsi:type="xs:string">КА_Парт_Наименование</Value>
+							</Property>
+							<Property name="ТекстЗапроса">
+								<Value xsi:type="xs:string">ВЫБРАТЬ
+	Контрагенты.Ссылка КАК Ссылка,
+	Контрагенты.Партнер КАК Партнер
+ИЗ
+	Справочник.Контрагенты КАК Контрагенты
+ГДЕ
+	//Контрагенты.Партнер =&amp;Партнер
+	Контрагенты.Наименование &lt;&gt; Контрагенты.Партнер.Наименование </Value>
+							</Property>
+							<Property name="ТекстКод">
+								<Value xsi:type="xs:string"/>
+							</Property>
+							<Property name="МетодИсполненияКода">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="ПараметрыЗапроса">
+								<Value xsi:type="ValueListType">
+									<valueType/>
+									<lastId xsi:type="xs:decimal">-1</lastId>
+								</Value>
+							</Property>
+							<Property name="ВременныеТаблицы">
+								<Value xsi:type="ValueListType">
+									<valueType/>
+									<lastId xsi:type="xs:decimal">-1</lastId>
+								</Value>
+							</Property>
+							<Property name="Строки">
+								<Value xsi:type="Array"/>
+							</Property>
+							<Property name="Инфо">
+								<Value xsi:type="xs:string">25 / 0:00:00.022</Value>
+							</Property>
+							<Property name="КурсорНачалоСтроки">
+								<Value xsi:type="xs:decimal">7</Value>
+							</Property>
+							<Property name="КурсорНачалоКолонки">
+								<Value xsi:type="xs:decimal">9</Value>
+							</Property>
+							<Property name="КурсорКонецСтроки">
+								<Value xsi:type="xs:decimal">7</Value>
+							</Property>
+							<Property name="КурсорКонецКолонки">
+								<Value xsi:type="xs:decimal">9</Value>
+							</Property>
+							<Property name="КодКурсорНачалоСтроки">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="КодКурсорНачалоКолонки">
+								<Value xsi:type="xs:decimal">5</Value>
+							</Property>
+							<Property name="КодКурсорКонецСтроки">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="КодКурсорКонецКолонки">
+								<Value xsi:type="xs:decimal">5</Value>
+							</Property>
+						</Value>
+					</Value>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">0 / 0:00:00.016</Value>
+				</Property>
+				<Property name="КурсорНачалоСтроки">
+					<Value xsi:type="xs:decimal">7</Value>
+				</Property>
+				<Property name="КурсорНачалоКолонки">
+					<Value xsi:type="xs:decimal">1</Value>
+				</Property>
+				<Property name="КурсорКонецСтроки">
+					<Value xsi:type="xs:decimal">7</Value>
+				</Property>
+				<Property name="КурсорКонецКолонки">
+					<Value xsi:type="xs:decimal">1</Value>
+				</Property>
+				<Property name="КодКурсорНачалоСтроки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КодКурсорНачалоКолонки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КодКурсорКонецСтроки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КодКурсорКонецКолонки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">КонтекстСвязь</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	кг_КонтекстСвязь.КонтекстДокумент КАК КонтекстДокумент,
+	кг_КонтекстСвязь.КонтекстДокумент.ТипДокумента КАК КонтекстТипДокумента,
+	кг_КонтекстСвязь.КонтекстДокумент.Тип КАК КонтекстТип,
+	кг_КонтекстСвязь.КонтекстДокумент.Штрихкод КАК КонтекстШтрихкод,
+	кг_КонтекстСвязь.Штрихкод КАК Штрихкод,
+	кг_КонтекстСвязь.Объект КАК Объект,
+	ТИПЗНАЧЕНИЯ(кг_КонтекстСвязь.Объект) КАК ТипОбъекта
+ИЗ
+	РегистрСведений.кг_КонтекстСвязь КАК кг_КонтекстСвязь
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">2 263 / 0:00:00.031</Value>
+				</Property>
+				<Property name="КурсорНачалоСтроки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КурсорНачалоКолонки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КурсорКонецСтроки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КурсорКонецКолонки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КодКурсорНачалоСтроки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КодКурсорНачалоКолонки">
+					<Value xsi:type="xs:decimal">5</Value>
+				</Property>
+				<Property name="КодКурсорКонецСтроки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КодКурсорКонецКолонки">
+					<Value xsi:type="xs:decimal">5</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Запрос1</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array">
+						<Value xsi:type="Structure">
+							<Property name="Имя">
+								<Value xsi:type="xs:string">ИзмененныеДоговора</Value>
+							</Property>
+							<Property name="ТекстЗапроса">
+								<Value xsi:type="xs:string">ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВерсииОбъектов.Объект КАК Объект,
+	ПРЕДСТАВЛЕНИЕССЫЛКИ(ВерсииОбъектов.Объект) КАК ОбъектПредставление,
+	ВерсииОбъектов.Объект.Ссылка КАК Ссылка
+ИЗ
+	РегистрСведений.ВерсииОбъектов КАК ВерсииОбъектов
+ГДЕ
+	ВерсииОбъектов.Объект ССЫЛКА Справочник.ДоговорыКонтрагентов
+	И ВЫРАЗИТЬ(ВерсииОбъектов.Объект КАК Справочник.ДоговорыКонтрагентов).Дата &gt; &amp;ДатаДоговора
+	И ВерсииОбъектов.АвторВерсии = &amp;АвторВерсии
+	И ВерсииОбъектов.ДатаВерсии &gt; &amp;ДатаВерсии
+	И ВерсииОбъектов.НомерВерсии &gt; 1
+</Value>
+							</Property>
+							<Property name="ТекстКод">
+								<Value xsi:type="xs:string"/>
+							</Property>
+							<Property name="МетодИсполненияКода">
+								<Value xsi:type="xs:decimal">2</Value>
+							</Property>
+							<Property name="ПараметрыЗапроса">
+								<Value xsi:type="ValueListType">
+									<valueType/>
+									<lastId xsi:type="xs:decimal">2</lastId>
+									<item>
+										<value xsi:type="Structure">
+											<Property name="Имя">
+												<Value xsi:type="xs:string">АвторВерсии</Value>
+											</Property>
+											<Property name="ТипЗначения">
+												<Value xsi:type="TypeDescription">
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.Пользователи</Type>
+												</Value>
+											</Property>
+											<Property name="Значение">
+												<Value xmlns:d13p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d13p1:CatalogRef.Пользователи">60fe73ac-738c-11ec-ab15-00505687110f</Value>
+											</Property>
+											<Property name="ТипКонтейнера">
+												<Value xsi:type="xs:decimal">0</Value>
+											</Property>
+											<Property name="Контейнер">
+												<Value xmlns:d13p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d13p1:CatalogRef.Пользователи">60fe73ac-738c-11ec-ab15-00505687110f</Value>
+											</Property>
+										</value>
+										<id xsi:type="xs:decimal">0</id>
+									</item>
+									<item>
+										<value xsi:type="Structure">
+											<Property name="Имя">
+												<Value xsi:type="xs:string">ДатаВерсии</Value>
+											</Property>
+											<Property name="ТипЗначения">
+												<Value xsi:type="TypeDescription">
+													<Type>xs:dateTime</Type>
+													<DateQualifiers>
+														<DateFractions>DateTime</DateFractions>
+													</DateQualifiers>
+												</Value>
+											</Property>
+											<Property name="Значение">
+												<Value xsi:type="xs:dateTime">2022-02-07T10:00:00</Value>
+											</Property>
+											<Property name="ТипКонтейнера">
+												<Value xsi:type="xs:decimal">0</Value>
+											</Property>
+											<Property name="Контейнер">
+												<Value xsi:type="xs:dateTime">2022-02-07T10:00:00</Value>
+											</Property>
+										</value>
+										<id xsi:type="xs:decimal">1</id>
+									</item>
+									<item>
+										<value xsi:type="Structure">
+											<Property name="Имя">
+												<Value xsi:type="xs:string">ДатаДоговора</Value>
+											</Property>
+											<Property name="ТипЗначения">
+												<Value xsi:type="TypeDescription">
+													<Type>xs:dateTime</Type>
+													<DateQualifiers>
+														<DateFractions>DateTime</DateFractions>
+													</DateQualifiers>
+												</Value>
+											</Property>
+											<Property name="Значение">
+												<Value xsi:type="xs:dateTime">2022-01-13T00:00:00</Value>
+											</Property>
+											<Property name="ТипКонтейнера">
+												<Value xsi:type="xs:decimal">0</Value>
+											</Property>
+											<Property name="Контейнер">
+												<Value xsi:type="xs:dateTime">2022-01-13T00:00:00</Value>
+											</Property>
+										</value>
+										<id xsi:type="xs:decimal">2</id>
+									</item>
+								</Value>
+							</Property>
+							<Property name="ВременныеТаблицы">
+								<Value xsi:type="ValueListType">
+									<valueType/>
+									<lastId xsi:type="xs:decimal">-1</lastId>
+								</Value>
+							</Property>
+							<Property name="Строки">
+								<Value xsi:type="Array"/>
+							</Property>
+							<Property name="Инфо">
+								<Value xsi:type="xs:string">5 / 0:00:00.331</Value>
+							</Property>
+							<Property name="КурсорНачалоСтроки">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="КурсорНачалоКолонки">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="КурсорКонецСтроки">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="КурсорКонецКолонки">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="КодКурсорНачалоСтроки">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="КодКурсорНачалоКолонки">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="КодКурсорКонецСтроки">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="КодКурсорКонецКолонки">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+						</Value>
+						<Value xsi:type="Structure">
+							<Property name="Имя">
+								<Value xsi:type="xs:string">КонтрагентыПартнеры</Value>
+							</Property>
+							<Property name="ТекстЗапроса">
+								<Value xsi:type="xs:string">ВЫБРАТЬ
+	Контрагенты.Ссылка КАК Ссылка,
+	Контрагенты.Представление КАК Представление,
+	Контрагенты.ИНН КАК ИНН,
+	Контрагенты.КПП КАК КПП,
+	Контрагенты.Партнер КАК Партнер,
+	Контрагенты.ГоловнойКонтрагент КАК ГоловнойКонтрагент,
+	Контрагенты.Партнер.Родитель КАК ПартнерРодитель,
+	Контрагенты.ГоловнойКонтрагент.Партнер КАК ГоловнойКонтрагентПартнер
+ИЗ
+	Справочник.Контрагенты КАК Контрагенты
+ГДЕ
+	Контрагенты.ГоловнойКонтрагент&lt;&gt;Контрагенты.Ссылка 
+    И Контрагенты.Партнер.Родитель &lt;&gt; Контрагенты.ГоловнойКонтрагент.Партнер
+    И Контрагенты.Партнер &lt;&gt; Контрагенты.ГоловнойКонтрагент.Партнер
+	//И Контрагенты.Наименование подобно &amp;Наименование
+	
+</Value>
+							</Property>
+							<Property name="ТекстКод">
+								<Value xsi:type="xs:string">Если Выборка.Ссылка &lt;&gt; Выборка.ГоловнойКонтрагент И Выборка.Партнер &lt;&gt; Выборка.ГоловнойКонтрагентПартнер Тогда
+	ПартнерОбъект =  Выборка.Партнер.ПолучитьОбъект();
+	ПартнерОбъект.Родитель =Выборка.ГоловнойКонтрагентПартнер;
+	ПартнерОбъект.Записать();
+КонецЕсли;	 </Value>
+							</Property>
+							<Property name="МетодИсполненияКода">
+								<Value xsi:type="xs:decimal">2</Value>
+							</Property>
+							<Property name="ПараметрыЗапроса">
+								<Value xsi:type="ValueListType">
+									<valueType/>
+									<lastId xsi:type="xs:decimal">0</lastId>
+									<item>
+										<value xsi:type="Structure">
+											<Property name="Имя">
+												<Value xsi:type="xs:string">Наименование</Value>
+											</Property>
+											<Property name="ТипЗначения">
+												<Value xsi:type="TypeDescription">
+													<Type>xs:string</Type>
+													<StringQualifiers>
+														<Length>0</Length>
+														<AllowedLength>Variable</AllowedLength>
+													</StringQualifiers>
+												</Value>
+											</Property>
+											<Property name="Значение">
+												<Value xsi:type="xs:string">%утов%</Value>
+											</Property>
+											<Property name="ТипКонтейнера">
+												<Value xsi:type="xs:decimal">0</Value>
+											</Property>
+											<Property name="Контейнер">
+												<Value xsi:type="xs:string">%утов%</Value>
+											</Property>
+										</value>
+										<id xsi:type="xs:decimal">0</id>
+									</item>
+								</Value>
+							</Property>
+							<Property name="ВременныеТаблицы">
+								<Value xsi:type="ValueListType">
+									<valueType/>
+									<lastId xsi:type="xs:decimal">-1</lastId>
+								</Value>
+							</Property>
+							<Property name="Строки">
+								<Value xsi:type="Array"/>
+							</Property>
+							<Property name="Инфо">
+								<Value xsi:type="xs:string">0 / 0:00:00.016</Value>
+							</Property>
+							<Property name="КурсорНачалоСтроки">
+								<Value xsi:type="xs:decimal">14</Value>
+							</Property>
+							<Property name="КурсорНачалоКолонки">
+								<Value xsi:type="xs:decimal">4</Value>
+							</Property>
+							<Property name="КурсорКонецСтроки">
+								<Value xsi:type="xs:decimal">14</Value>
+							</Property>
+							<Property name="КурсорКонецКолонки">
+								<Value xsi:type="xs:decimal">4</Value>
+							</Property>
+							<Property name="КодКурсорНачалоСтроки">
+								<Value xsi:type="xs:decimal">4</Value>
+							</Property>
+							<Property name="КодКурсорНачалоКолонки">
+								<Value xsi:type="xs:decimal">49</Value>
+							</Property>
+							<Property name="КодКурсорКонецСтроки">
+								<Value xsi:type="xs:decimal">4</Value>
+							</Property>
+							<Property name="КодКурсорКонецКолонки">
+								<Value xsi:type="xs:decimal">49</Value>
+							</Property>
+						</Value>
+						<Value xsi:type="Structure">
+							<Property name="Имя">
+								<Value xsi:type="xs:string">ЗапросВидыДоступаПрофилей</Value>
+							</Property>
+							<Property name="ТекстЗапроса">
+								<Value xsi:type="xs:string">ВЫБРАТЬ
+	ПрофилиГруппДоступа.Родитель КАК Родитель,
+	ПрофилиГруппДоступа.Ссылка КАК Ссылка,
+	ПрофилиГруппДоступа.Представление КАК Представление,
+	ПрофилиГруппДоступа.ИдентификаторПоставляемыхДанных КАК ИдентификаторПоставляемыхДанных,
+	ПрофилиГруппДоступа.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
+	ПрофилиГруппДоступа.ВидыДоступа.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ВидДоступа КАК ВидДоступа,
+		Предустановленный КАК Предустановленный,
+		ВсеРазрешены КАК ВсеРазрешены
+	) КАК ВидыДоступа,
+	ПрофилиГруппДоступа.Роли.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Роль КАК Роль
+	) КАК Роли
+ИЗ
+	Справочник.ПрофилиГруппДоступа КАК ПрофилиГруппДоступа
+</Value>
+							</Property>
+							<Property name="ТекстКод">
+								<Value xsi:type="xs:string"/>
+							</Property>
+							<Property name="МетодИсполненияКода">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="ПараметрыЗапроса">
+								<Value xsi:type="ValueListType">
+									<valueType/>
+									<lastId xsi:type="xs:decimal">-1</lastId>
+								</Value>
+							</Property>
+							<Property name="ВременныеТаблицы">
+								<Value xsi:type="ValueListType">
+									<valueType/>
+									<lastId xsi:type="xs:decimal">-1</lastId>
+								</Value>
+							</Property>
+							<Property name="Строки">
+								<Value xsi:type="Array"/>
+							</Property>
+							<Property name="Инфо">
+								<Value xsi:type="xs:string">90 / 0:00:00.031</Value>
+							</Property>
+							<Property name="КурсорНачалоСтроки">
+								<Value xsi:type="xs:decimal">14</Value>
+							</Property>
+							<Property name="КурсорНачалоКолонки">
+								<Value xsi:type="xs:decimal">19</Value>
+							</Property>
+							<Property name="КурсорКонецСтроки">
+								<Value xsi:type="xs:decimal">14</Value>
+							</Property>
+							<Property name="КурсорКонецКолонки">
+								<Value xsi:type="xs:decimal">19</Value>
+							</Property>
+							<Property name="КодКурсорНачалоСтроки">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="КодКурсорНачалоКолонки">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="КодКурсорКонецСтроки">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="КодКурсорКонецКолонки">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+						</Value>
+					</Value>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="КурсорНачалоСтроки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КурсорНачалоКолонки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КурсорКонецСтроки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КурсорКонецКолонки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КодКурсорНачалоСтроки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КодКурсорНачалоКолонки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КодКурсорКонецСтроки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="КодКурсорКонецКолонки">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">КА_КодПрестима</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Контрагенты.Ссылка КАК Ссылка,
+	КонтрагентыДополнительныеРеквизиты.Значение КАК Значение,
+	ПартнерыДополнительныеРеквизиты.Значение КАК Значение1,
+	ПартнерыДополнительныеРеквизиты.Свойство КАК Свойство
+ИЗ
+	Справочник.Контрагенты КАК Контрагенты
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Партнеры КАК Партнеры
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Партнеры.ДополнительныеРеквизиты КАК ПартнерыДополнительныеРеквизиты
+			ПО (Партнеры.Ссылка = ПартнерыДополнительныеРеквизиты.Ссылка)
+				И (ПартнерыДополнительныеРеквизиты.Свойство = &amp;пвхКодПрестима)
+		ПО (Контрагенты.Партнер = Партнеры.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты.ДополнительныеРеквизиты КАК КонтрагентыДополнительныеРеквизиты
+		ПО (Контрагенты.Ссылка = КонтрагентыДополнительныеРеквизиты.Ссылка)
+			И (КонтрагентыДополнительныеРеквизиты.Свойство = &amp;пвхКодПрестима)
+ГДЕ
+	КонтрагентыДополнительныеРеквизиты.Значение ЕСТЬ NULL
+	И НЕ ПартнерыДополнительныеРеквизиты.Значение ЕСТЬ NULL
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string">КаО = Выборка.Ссылка.ПолучитьОбъект();
+дрс = КАО.ДополнительныеРеквизиты.Добавить();
+дрс.Свойство = Параметры.пвхКодПрестима;
+дрс.Значение = Выборка.Значение1;
+дрс.Текстоваястрока = дрс.Значение;
+КАО.Записать();</Value>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">2</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">0</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">пвхКодПрестима</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения">370d4d86-6190-11ec-bc8c-00505687c8d7</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения">370d4d86-6190-11ec-bc8c-00505687c8d7</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">0 / 0:00:00.031</Value>
+				</Property>
+				<Property name="КурсорНачалоСтроки">
+					<Value xsi:type="xs:decimal">8</Value>
+				</Property>
+				<Property name="КурсорНачалоКолонки">
+					<Value xsi:type="xs:decimal">21</Value>
+				</Property>
+				<Property name="КурсорКонецСтроки">
+					<Value xsi:type="xs:decimal">8</Value>
+				</Property>
+				<Property name="КурсорКонецКолонки">
+					<Value xsi:type="xs:decimal">21</Value>
+				</Property>
+				<Property name="КодКурсорНачалоСтроки">
+					<Value xsi:type="xs:decimal">5</Value>
+				</Property>
+				<Property name="КодКурсорНачалоКолонки">
+					<Value xsi:type="xs:decimal">19</Value>
+				</Property>
+				<Property name="КодКурсорКонецСтроки">
+					<Value xsi:type="xs:decimal">5</Value>
+				</Property>
+				<Property name="КодКурсорКонецКолонки">
+					<Value xsi:type="xs:decimal">19</Value>
+				</Property>
+			</Value>
+		</Value>
+	</Property>
+</Structure>

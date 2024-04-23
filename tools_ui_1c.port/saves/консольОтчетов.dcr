@@ -1,0 +1,354 @@
+﻿{"#",e603c0f2-92fb-4d47-8f38-a44a381cf235,
+{1,
+{5,
+{1,"Имя",
+{"Pattern",
+{"S",64,1}
+},"",0},
+{3,"ТипСтроки",
+{"Pattern",
+{"N",10,0,0}
+},"",0},
+{2,"Данные",
+{"Pattern",
+{"S"}
+},"",0},
+{41,"НастройкиСКД",
+{"Pattern",
+{"S"}
+},"",0},
+{4,"ВнешниеНаборыДанных",
+{"Pattern",
+{"#",acf6192e-81ca-46ef-93a6-5a6968b78663}
+},"",0}
+},
+{2,5,0,1,1,3,2,2,3,41,4,4,
+{1,1,
+{2,0,5,
+{"S","Отчеты"},
+{"N",4},
+{"S",""},
+{"S",""},
+{"#",acf6192e-81ca-46ef-93a6-5a6968b78663,
+{9,
+{3,
+{1,"Имя",
+{"Pattern",
+{"S"}
+},"",0},
+{2,"Значение",
+{"Pattern",
+{"S"}
+},"",0},
+{3,"Представление",
+{"Pattern",
+{"S"}
+},"",0}
+},
+{2,3,0,1,1,2,2,3,
+{1,0},-1,-1},
+{0,0}
+}
+},1,
+{1,1,
+{2,1,5,
+{"S","Отчет"},
+{"N",0},
+{"S","<dataCompositionSchema xmlns=""http://v8.1c.ru/8.1/data-composition-system/schema"" xmlns:dcscom=""http://v8.1c.ru/8.1/data-composition-system/common"" xmlns:dcscor=""http://v8.1c.ru/8.1/data-composition-system/core"" xmlns:dcsset=""http://v8.1c.ru/8.1/data-composition-system/settings"" xmlns:v8=""http://v8.1c.ru/8.1/data/core"" xmlns:v8ui=""http://v8.1c.ru/8.1/data/ui"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type=""DataSetQuery"">
+		<name>НаборДанных1</name>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>Родитель</dataPath>
+			<field>Родитель</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>Представление</dataPath>
+			<field>Представление</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>ИдентификаторПоставляемыхДанных</dataPath>
+			<field>ИдентификаторПоставляемыхДанных</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>ИмяПредопределенныхДанных</dataPath>
+			<field>ИмяПредопределенныхДанных</field>
+		</field>
+		<field xsi:type=""DataSetFieldNestedDataSet"">
+			<dataPath>ВидыДоступа</dataPath>
+			<field>ВидыДоступа</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>ВидыДоступа.Ссылка</dataPath>
+			<field>ВидыДоступа.Ссылка</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>ВидыДоступа.НомерСтроки</dataPath>
+			<field>ВидыДоступа.НомерСтроки</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>ВидыДоступа.ВидДоступа</dataPath>
+			<field>ВидыДоступа.ВидДоступа</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>ВидыДоступа.Предустановленный</dataPath>
+			<field>ВидыДоступа.Предустановленный</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>ВидыДоступа.ВсеРазрешены</dataPath>
+			<field>ВидыДоступа.ВсеРазрешены</field>
+		</field>
+		<field xsi:type=""DataSetFieldNestedDataSet"">
+			<dataPath>Роли</dataPath>
+			<field>Роли</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>Роли.Ссылка</dataPath>
+			<field>Роли.Ссылка</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>Роли.НомерСтроки</dataPath>
+			<field>Роли.НомерСтроки</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>Роли.Роль</dataPath>
+			<field>Роли.Роль</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ПрофилиГруппДоступа.Родитель КАК Родитель,
+	ПрофилиГруппДоступа.Ссылка КАК Ссылка,
+	ПрофилиГруппДоступа.Представление КАК Представление,
+	ПрофилиГруппДоступа.ИдентификаторПоставляемыхДанных КАК ИдентификаторПоставляемыхДанных,
+	ПрофилиГруппДоступа.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
+	ПрофилиГруппДоступа.ВидыДоступа.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ВидДоступа КАК ВидДоступа,
+		Предустановленный КАК Предустановленный,
+		ВсеРазрешены КАК ВсеРазрешены
+	) КАК ВидыДоступа,
+	ПрофилиГруппДоступа.Роли.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Роль КАК Роль
+	) КАК Роли
+ИЗ
+	Справочник.ПрофилиГруппДоступа КАК ПрофилиГруппДоступа
+</query>
+	</dataSet>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type=""xs:string"">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style=""http://v8.1c.ru/8.1/data/ui/style"" xmlns:sys=""http://v8.1c.ru/8.1/data/ui/fonts/system"" xmlns:web=""http://v8.1c.ru/8.1/data/ui/colors/web"" xmlns:win=""http://v8.1c.ru/8.1/data/ui/colors/windows"">
+			<dcsset:selection>
+				<dcsset:item xsi:type=""dcsset:SelectedItemAuto""/>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>ИдентификаторПоставляемыхДанных</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>ИмяПредопределенныхДанных</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemFolder"">
+					<dcsset:field>Роли</dcsset:field>
+					<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+						<dcsset:field>Роли.НомерСтроки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+						<dcsset:field>Роли.Роль</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+						<dcsset:field>Роли.Ссылка</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemFolder"">
+					<dcsset:field>ВидыДоступа</dcsset:field>
+					<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+						<dcsset:field>ВидыДоступа.ВидДоступа</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+						<dcsset:field>ВидыДоступа.ВсеРазрешены</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+						<dcsset:field>ВидыДоступа.НомерСтроки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+						<dcsset:field>ВидыДоступа.Предустановленный</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+						<dcsset:field>ВидыДоступа.Ссылка</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:outputParameters/>
+			<dcsset:item xsi:type=""dcsset:StructureItemGroup"">
+				<dcsset:order>
+					<dcsset:item xsi:type=""dcsset:OrderItemAuto""/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type=""dcsset:SelectedItemAuto""/>
+				</dcsset:selection>
+				<dcsset:outputParameters/>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</dataCompositionSchema>"},
+{"S","<Settings xmlns=""http://v8.1c.ru/8.1/data-composition-system/settings"" xmlns:dcscor=""http://v8.1c.ru/8.1/data-composition-system/core"" xmlns:style=""http://v8.1c.ru/8.1/data/ui/style"" xmlns:sys=""http://v8.1c.ru/8.1/data/ui/fonts/system"" xmlns:v8=""http://v8.1c.ru/8.1/data/core"" xmlns:v8ui=""http://v8.1c.ru/8.1/data/ui"" xmlns:web=""http://v8.1c.ru/8.1/data/ui/colors/web"" xmlns:win=""http://v8.1c.ru/8.1/data/ui/colors/windows"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+	<selection>
+		<item xsi:type=""SelectedItemAuto""/>
+	</selection>
+	<item xsi:type=""StructureItemGroup"">
+		<groupItems>
+			<item xsi:type=""GroupItemField"">
+				<field>Ссылка</field>
+				<groupType>Hierarchy</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+			<item xsi:type=""GroupItemField"">
+				<field>ИдентификаторПоставляемыхДанных</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+			<item xsi:type=""GroupItemField"">
+				<field>ИмяПредопределенныхДанных</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+		</groupItems>
+		<order>
+			<item xsi:type=""OrderItemAuto""/>
+		</order>
+		<selection>
+			<item xsi:type=""SelectedItemAuto""/>
+		</selection>
+		<item xsi:type=""StructureItemGroup"">
+			<groupItems>
+				<item xsi:type=""GroupItemField"">
+					<field>Роли.Ссылка</field>
+					<groupType>Items</groupType>
+					<periodAdditionType>None</periodAdditionType>
+					<periodAdditionBegin xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionBegin>
+					<periodAdditionEnd xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionEnd>
+				</item>
+			</groupItems>
+			<order>
+				<item xsi:type=""OrderItemAuto""/>
+			</order>
+			<selection>
+				<item xsi:type=""SelectedItemAuto""/>
+			</selection>
+			<item xsi:type=""StructureItemGroup"">
+				<groupItems>
+					<item xsi:type=""GroupItemField"">
+						<field>Роли.Роль</field>
+						<groupType>Items</groupType>
+						<periodAdditionType>None</periodAdditionType>
+						<periodAdditionBegin xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionBegin>
+						<periodAdditionEnd xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionEnd>
+					</item>
+				</groupItems>
+				<order>
+					<item xsi:type=""OrderItemAuto""/>
+				</order>
+				<selection>
+					<item xsi:type=""SelectedItemAuto""/>
+				</selection>
+				<item xsi:type=""StructureItemGroup"">
+					<groupItems>
+						<item xsi:type=""GroupItemField"">
+							<field>Роли.Ссылка</field>
+							<groupType>Items</groupType>
+							<periodAdditionType>None</periodAdditionType>
+							<periodAdditionBegin xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionBegin>
+							<periodAdditionEnd xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionEnd>
+						</item>
+					</groupItems>
+					<order>
+						<item xsi:type=""OrderItemAuto""/>
+					</order>
+					<selection>
+						<item xsi:type=""SelectedItemAuto""/>
+					</selection>
+				</item>
+			</item>
+		</item>
+		<item xsi:type=""StructureItemGroup"">
+			<groupItems>
+				<item xsi:type=""GroupItemField"">
+					<field>ВидыДоступа.Ссылка</field>
+					<groupType>Items</groupType>
+					<periodAdditionType>None</periodAdditionType>
+					<periodAdditionBegin xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionBegin>
+					<periodAdditionEnd xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionEnd>
+				</item>
+			</groupItems>
+			<order>
+				<item xsi:type=""OrderItemAuto""/>
+			</order>
+			<selection>
+				<item xsi:type=""SelectedItemAuto""/>
+			</selection>
+			<item xsi:type=""StructureItemGroup"">
+				<groupItems>
+					<item xsi:type=""GroupItemField"">
+						<field>ВидыДоступа.ВидДоступа</field>
+						<groupType>Items</groupType>
+						<periodAdditionType>None</periodAdditionType>
+						<periodAdditionBegin xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionBegin>
+						<periodAdditionEnd xsi:type=""xs:dateTime"">0001-01-01T00:00:00</periodAdditionEnd>
+					</item>
+				</groupItems>
+				<order>
+					<item xsi:type=""OrderItemAuto""/>
+				</order>
+				<selection>
+					<item xsi:type=""SelectedItemAuto""/>
+				</selection>
+			</item>
+		</item>
+	</item>
+</Settings>"},
+{"#",acf6192e-81ca-46ef-93a6-5a6968b78663,
+{9,
+{3,
+{1,"Имя",
+{"Pattern",
+{"S"}
+},"",0},
+{2,"Значение",
+{"Pattern",
+{"S"}
+},"",0},
+{3,"Представление",
+{"Pattern",
+{"S"}
+},"",0}
+},
+{2,3,0,1,1,2,2,3,
+{1,0},-1,-1},
+{0,0}
+}
+},0}
+}
+}
+},-1,1}
+}
+}

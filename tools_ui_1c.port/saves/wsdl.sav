@@ -1,0 +1,45 @@
+﻿<ValueTable xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<column>
+		<Name xsi:type="xs:string">МестоположениеWSDL</Name>
+		<ValueType>
+			<Type>xs:string</Type>
+			<StringQualifiers>
+				<Length>0</Length>
+				<AllowedLength>Variable</AllowedLength>
+			</StringQualifiers>
+		</ValueType>
+		<Width xsi:type="xs:decimal">20</Width>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">ИмяПользователя</Name>
+		<ValueType>
+			<Type>xs:string</Type>
+			<StringQualifiers>
+				<Length>0</Length>
+				<AllowedLength>Variable</AllowedLength>
+			</StringQualifiers>
+		</ValueType>
+		<Width xsi:type="xs:decimal">20</Width>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Пароль</Name>
+		<ValueType>
+			<Type>xs:string</Type>
+			<StringQualifiers>
+				<Length>0</Length>
+				<AllowedLength>Variable</AllowedLength>
+			</StringQualifiers>
+		</ValueType>
+		<Width xsi:type="xs:decimal">20</Width>
+	</column>
+	<row>
+		<Value>https://10.4.40.177/services/ELARAuth?wsdl</Value>
+		<Value>komos\apmedvedev</Value>
+		<Value>apmedvedev</Value>
+	</row>
+	<row>
+		<Value>https://10.4.40.177/services/ELARRemoteMethodCall?wsdl</Value>
+		<Value>komos\apmedvedev</Value>
+		<Value>apmedvedev</Value>
+	</row>
+</ValueTable>
